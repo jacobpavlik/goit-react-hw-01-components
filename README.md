@@ -1,5 +1,4 @@
-**Read in other languages: [rosyjski](README.md), [polski](README.pl.md).** coś
-zmieniam
+**Read in other languages: [rosyjski](README.md), [polski](README.pl.md).**
 
 # React homework template
 

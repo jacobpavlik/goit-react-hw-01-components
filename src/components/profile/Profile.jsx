@@ -2,17 +2,22 @@ import PropTypes from 'prop-types';
 import user from './user.json';
 
 export const Profile = props => {
-  const { username, tag, location, avatar, stats } = props;
-  const followers = user.stats.followers;
-  const views = user.stats.views;
-  const likes = user.stats.likes;
+  const {
+    username = user.username,
+    tag = user.tag,
+    location = user.location,
+    avatar = user.avatar,
+    followers = user.stats.followers,
+    views = user.stats.views,
+    likes = user.stats.likes,
+  } = props;
   return (
     <div className="profile">
       <div className="description">
-        <img src={user.avatar} alt="User avatar" className="avatar" />
-        <p className="name">{user.username}</p>
-        <p className="tag">@{user.tag}</p>
-        <p className="location">{user.location}</p>
+        <img src={avatar} alt="User avatar" className="avatar" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
 
       <ul className="stats">
@@ -31,4 +36,14 @@ export const Profile = props => {
       </ul>
     </div>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
 };

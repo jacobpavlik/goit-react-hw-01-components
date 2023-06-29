@@ -5,7 +5,7 @@ export const Statistics = props => {
   return (
     <div>
       <section class="statistics">
-        <h2 class="title">Upload stats</h2>
+        {{ title } && <h2 class="title">Upload stats</h2>}
 
         <ul class="stat-list">
           <li class="item">

@@ -1,0 +1,48 @@
+.statistics {
+  border: 1px solid gray;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.title {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: rgb(53, 56, 56);
+  text-align: center;
+  padding: 20px 50px;
+}
+.statList {
+  display: flex;
+  font-size: 25px;
+  justify-content: space-around;
+  color: lightgray;
+  /* justify-content: flex-start; */
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  background-color: gray;
+  flex-basis: 72px;
+}
+.docx {
+  composes: item;
+  background-color: rgb(49, 175, 218);
+}
+.pdf {
+  composes: item;
+  background-color: rgb(180, 76, 180);
+}
+.mp3 {
+  composes: item;
+  background-color: rgb(223, 61, 93);
+}
+.psd {
+  composes: item;
+  background-color: rgb(40, 214, 214);
+}
+
+.label {
+  font-size: 20px;
+}
